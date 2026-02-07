@@ -285,35 +285,47 @@ New methods for teaching mechanics and engaging the next generation of engineers
         function loadSessions(trackId, element) {
             document.querySelectorAll('.track-item').forEach(el => el.classList.remove('active'));
             element.classList.add('active');
-            
+    
             const sidebar = document.getElementById('session-sidebar');
             const list = document.getElementById('session-list');
             sidebar.style.display = "block";
             list.innerHTML = "";
 
-            // Loop through the data keys to find ones starting with 't{trackId}_s'
+            const searchPrefix = `t${trackId}_s`;
+
             Object.keys(SYMPOSIUM_DATA).forEach(sessionId => {
-                if (sessionId.startsWith(`t${trackId}_s`)) {
+                if (sessionId.startsWith(searchPrefix)) {
                     const rawText = SYMPOSIUM_DATA[sessionId];
-                    const firstLine = rawText.split('\n')[0];
-                    const title = firstLine.replace('SYMPOSIUM:', '').trim();
+                    const lines = rawText.split('\n');
+                    const title = lines[0].replace('SYMPOSIUM:', '').trim();
+            
+                    // NEW: Extract the index (e.g., "1.1") from "t1_s1.1"
+                    const sessionIndex = sessionId.split('s')[1]; 
 
                     const item = document.createElement('div');
                     item.className = "session-item";
-                    item.innerHTML = `<span class="session-title">${title}</span>`;
-                    item.onclick = () => {
-                        document.querySelectorAll('.session-item').forEach(el => el.classList.remove('active'));
-                        item.classList.add('active');
-                        renderReadingPane(rawText);
-                    };
-                    list.appendChild(item);
-                }
-            });
-
-            if (list.innerHTML === "") {
-                list.innerHTML = "<div style='padding:20px; color:#888;'>No sessions found for this track.</div>";
+            
+                    // NEW: Display the index in front of the title
+                    item.innerHTML = `
+                        <div class="session-title">
+                            <span style="color: var(--purdue-gold); font-weight: 800; margin-right: 8px;">${sessionIndex}</span>
+                            ${title}
+                        </div>
+            `       ;
+            
+                item.onclick = () => {
+                    document.querySelectorAll('.session-item').forEach(el => el.classList.remove('active'));
+                    item.classList.add('active');
+                    renderReadingPane(rawText);
+                };
+                list.appendChild(item);
             }
+        });
+
+        if (list.innerHTML === "") {
+            list.innerHTML = "<div style='padding:20px; color:#888;'>No sessions found for this track.</div>";
         }
+    }
 
         // Render the reading pane with raw text from the file data
         function renderReadingPane(rawText) {
