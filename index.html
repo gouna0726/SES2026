@@ -89,6 +89,7 @@
         };
 
         const SYMPOSIUM_DATA = {
+            // TRACK 1
             "t1_s1.1": `SYMPOSIUM: William Prager Medal Symposium in honor of Samuel Forest
 ORGANIZERS: Vladislav YASTREBOV
 William Prager Medal Symposium in honor of Samuel Forest`,
@@ -97,7 +98,7 @@ ORGANIZERS: Yonggang Huang, Koushil Sreenath
 This symposium will be focused on modern methods at the intersection of model-based and data-driven techniques for transformative engineering applications in autonomy, field robotics, and industry-shaping innovations.`,
             "t1_s1.3": `SYMPOSIUM: Y. Huang Engineering Science Medalist Symposium in Honor of Dimitris C. Lagoudas: Smart and Multifunctional Materials
 ORGANIZERS: Gary Seidel, Darren Hartl, Bjoern Kiefer, Siddiq Qidwai
-Theory, computation, experiments and applications for smart and multifunctional materials.  Special emphasis on shape memory alloys and multifunctional nanocomposites.`,
+Theory, computation, experiments and applications for smart and multifunctional materials. Special emphasis on shape memory alloys and multifunctional nanocomposites.`,
             "t1_s1.4": `SYMPOSIUM: SES Honorary Symposium
 ORGANIZERS: Thomas Siegmund
 This invited only symposium is in honor of the 2026 SES Fellows, Rice Medalist, Noether Medalist, and H. Gao Young Investigator Medalist.`,
@@ -106,169 +107,181 @@ ORGANIZERS: Kejie Zhao
 SES Student and Postdoctoral Award Symposium`,
             "t1_s1.6": `SYMPOSIUM: Young Faculty Assembly
 ORGANIZERS: Xiaojia Shelly Zhang, Yong Zhu, Kejie Zhao
-This symposium aims to create a space for SES attendees to convene, network, and learn about career development options and advice, work-life balance, and mentoring for early-career faculty members. Senior researchers in the community will serve as mentors in the event. By gathering both junior and senior researchers in the field, we also aim to foster the creation of mentorship relations through this event.`,
+This symposium aims to create a space for SES attendees to convene, network, and learn about career development options and advice, work-life balance, and mentoring for early-career faculty members.`,
             "t1_s1.7": `SYMPOSIUM: Structural Changes in Materials at Normal and Extreme Conditions: A Symposium in Honor of the 70th Birthday of Prof. Valery Levitas
-ORGANIZERS: Ashraf Bastawros, Kasra Momeni, Bjoern Kiefer
-The symposium aims to celebrate the 70th birthday of Prof. Valery Levitas and recognize his significant and extensive contributions in the fields of phase transformations, large strain continuum mechanics, and high-pressure science. Theoretical, computational, and experimental contributions are invited on the following topics: structural and phase changes in materials, strain-induced phase transformations under high pressure and large plastic deformations, phase field approach to phase transformations and other structural changes, and mechanics of materials under extreme conditions.`,
-            "t1_s1.8": `SYMPOSIUM: Nonlinear Mechanics of Soft Materials: A Symposium in Honor of the 60th Birthday of Prof. Stephan Rudykh
-ORGANIZERS: Gal DeBotton, Kostas Danas, Oscar Lopez-Pamies, Victor Lefevre
-The symposium aims to celebrate the 60th birthday of Prof. Stephan Rudykh and recognize his significant and extensive contributions in the field of nonlinear mechanics of soft materials. Theoretical, computational, and experimental contributions are invited on the following topics: nonlinear elasticity and instability of soft materials, mechanics of soft active materials, and wave propagation in soft materials.`,
-            "t2_s2.1": `SYMPOSIUM: Mechanics of Fibrous Materials: From Structure to Function
-ORGANIZERS: Hamed Hatami-Marbini, Matthew Grasinger, Catalin Picu
-This symposium focuses on the mechanical behavior of fibrous networks and materials (biological, synthetic, or hybrid). Topics include network topology, constitutive modeling, multi-scale interactions, and the role of fibers in determining macroscopic function in tissues or engineered systems.`,
-            "t2_s2.2": `SYMPOSIUM: Advanced Biomechanics for Musculoskeletal and Cardiovascular Systems
-ORGANIZERS: Pavlos Vlachos, Vitaliy Rayz, Adrian Shieh
-Contributions are invited on the experimental, computational, and clinical aspects of biomechanics related to heart valves, arteries, bone remodeling, and muscle mechanics. The focus is on understanding physiological processes and disease progression through mechanical analysis.`,
-            "t2_s2.3": `SYMPOSIUM: Mechanobiology: Force-Driven Cellular Processes
-ORGANIZERS: Taher Saif, Ning Wang, Jianping Fu
-This session explores how cells sense and respond to mechanical signals. Topics include cell-matrix interactions, nuclear mechanotransduction, the role of the cytoskeleton in force generation, and how mechanical cues influence development and disease.`,
-            "t2_s2.4": `SYMPOSIUM: Bio-inspired Materials and Soft Robotics
-ORGANIZERS: Shengqiang Cai, Xuanhe Zhao, Jie Yin
-Nature provides a blueprint for materials with unique properties. This symposium covers the design, mechanics, and fabrication of bio-inspired soft materials, actuators, and sensors for applications in soft robotics, wearable devices, and flexible electronics.`,
-            "t2_s2.5": `SYMPOSIUM: Modeling and Simulation of Biological Systems
-ORGANIZERS: Lupping Zhu, George Karniadakis, Paris Perdikaris
-Focusing on the latest computational methods, including multi-scale modeling and machine learning applications in biology. Topics include hemodynamics, protein folding mechanics, and digital twins for personalized medicine.`,
-            "t2_s2.6": `SYMPOSIUM: Mechanics of Biomaterials and Tissue Engineering
-ORGANIZERS: Kyriacos Athanasiou, Robert Mauck, Jennifer Elisseeff
-This symposium focuses on the mechanical properties and design of scaffolds for tissue regeneration. Contributions are welcome on orthopedic biomaterials, dental mechanics, and the integration of synthetic materials with host biological tissues.`,
-            "t2_s2.7": `SYMPOSIUM: Growth and Remodeling in Biological Tissues
-ORGANIZERS: Jay Humphrey, Gerhard Holzapfel, Ray Ogden
-Understanding how tissues change over time in response to mechanical loading. Topics include arterial wall remodeling, tumor growth mechanics, and wound healing simulations.`,
-            "t2_s2.8": `SYMPOSIUM: Mechanics of Brain and Neural Tissues
-ORGANIZERS: Christian Cyron, Ellen Kuhl, Michel Destrade
-This session covers the unique mechanical behavior of brain tissue, including traumatic brain injury modeling, neural growth, and the mechanics of neurodegenerative diseases.`,
-            "t3_s3.1": `SYMPOSIUM: Mechanics of Composite Materials and Structures
-ORGANIZERS: Wenbin Yu, J.N. Reddy, Ever Barbero
-Focusing on new theories, experimental methods, and computational tools for the analysis of traditional and advanced composites. Topics include laminated structures, plate and shell theories, and structural optimization.`,
-            "t3_s3.2": `SYMPOSIUM: Advanced Manufacturing: Processing, Modeling, and Characterization
-ORGANIZERS: Byron Pipes, Johnathan Goodsell, Tyler Hudson
-This symposium explores the mechanics of manufacturing processes, including additive manufacturing, automated fiber placement, and resin transfer molding. Focus is on process-induced defects and microstructural evolution.`,
-            "t3_s3.3": `SYMPOSIUM: Intelligent and Multifunctional Materials
-ORGANIZERS: Zoubeida Ounaies, Richard Claus, Henry Sodano
-Focusing on materials that can sense, respond, or adapt to their environment. Topics include piezoelectric materials, shape memory alloys, and self-healing composites.`,
-            "t3_s3.4": `SYMPOSIUM: Failure, Damage, and Durability of Composites
-ORGANIZERS: Anthony Waas, Ramesh Talreja, Fu-Kuo Chang
-Understanding the long-term performance and failure mechanisms in composite structures. Topics include fatigue, impact damage, delamination, and environmental degradation.`,
-            "t3_s3.5": `SYMPOSIUM: Multi-scale and Multi-physics Modeling of Composites
-ORGANIZERS: Jacob Aboudi, Somnath Ghosh, Marek-Jerzy Pindera
-Bridging the gap between micro-level constituent behavior and macro-level structural response. Focus on homogenization techniques and coupled physics (thermo-mechanical, chemo-mechanical).`,
-            "t3_s3.6": `SYMPOSIUM: Nanocomposites and Nano-structured Materials
-ORGANIZERS: Horacio Espinosa, Sinan Keten, Mohammad Naraghi
-Focusing on the mechanics of materials reinforced with carbon nanotubes, graphene, or other nanoparticles. Topics include interface mechanics and sizing effects.`,
-            "t3_s3.7": `SYMPOSIUM: Mechanics of Lightweight Structures for Aerospace and Automotive Applications
-ORGANIZERS: Michael Hyer, David Bushnell, Damodar Ambur
-Design and analysis of high-performance structures where weight is a critical factor. Topics include buckling, post-buckling, and sandwich construction.`,
-            "t3_s3.8": `SYMPOSIUM: Sustainability and Green Composites
-ORGANIZERS: Amar Mohanty, Manjusri Misra, Lawrence Drzal
-Exploring the mechanics of bio-based fibers and resins. Topics include recyclability, life-cycle analysis, and the mechanical performance of eco-friendly materials.`,
-            "t4_s4.1": `SYMPOSIUM: Mechanics of Energy Storage and Conversion Materials
-ORGANIZERS: Kejie Zhao, Yue Qi, Claudio Di Leo
-Focusing on the mechanical degradation and multi-physics coupling in batteries, fuel cells, and supercapacitors.`,
-            "t4_s4.2": `SYMPOSIUM: 2D Materials and Van der Waals Heterostructures
-ORGANIZERS: Rui Huang, Harold Park, Shuman Xia
-Mechanical properties, strain engineering, and interfacial mechanics of graphene, TMDs, and related 2D systems.`,
-            "t4_s4.3": `SYMPOSIUM: Mechanics of Polymers and Soft Matter
-ORGANIZERS: Meredith Silberstein, Shawn Chester, Ken Kamrin
-Exploring the viscoelasticity, plasticity, and large deformation behavior of polymers, elastomers, and hydrogels.`,
-            "t4_s4.4": `SYMPOSIUM: Metamaterials and Phononic Crystals
-ORGANIZERS: Nicholas Fang, Chiara Daraio, Andrea Alu
-Design and mechanics of architected materials with unusual properties like negative refraction, band gaps, and topological protection.`,
-            "t4_s4.5": `SYMPOSIUM: Micro- and Nano-mechanics of Materials
-ORGANIZERS: Julia Greer, Ting Zhu, Jian Han
-Size-dependent mechanical behavior, in-situ testing, and atomic-scale simulations.`,
-            "t4_s4.6": `SYMPOSIUM: Chemo-mechanics and Environmentally Assisted Degradation
-ORGANIZERS: Pradeep Sharma, Robert Ritchie, William Curtin
-Coupling between chemical reactions and mechanical failure, including hydrogen embrittlement and oxidation.`,
-            "t4_s4.7": `SYMPOSIUM: Mechanics of Ceramics and Brittle Materials
-ORGANIZERS: Nitin Padture, David Green, Reinhold Dauskardt
-Fracture, thermal shock, and reliability of advanced ceramics and coatings.`,
-            "t4_s4.8": `SYMPOSIUM: Data-Driven Mechanics and Materials Science
-ORGANIZERS: Wing Kam Liu, Ankit Srivastava, Wei Chen
-Machine learning, uncertainty quantification, and high-throughput screening for material discovery.`,
-            "t4_s4.9": `SYMPOSIUM: Mechanics of Metallic Glasses and Amorphous Solids
-ORGANIZERS: Michael Atzmon, Takeshi Egami, Yunfeng Shi
-Deformation mechanisms, shear bands, and relaxation in non-crystalline materials.`,
-            "t4_s4.10": `SYMPOSIUM: High-Entropy Alloys and Advanced Metallic Systems
-ORGANIZERS: Easo George, Robert Maass, Peter Liaw
-Mechanical performance, phase stability, and deformation twinning in complex concentrated alloys.`,
-            "t4_s4.11": `SYMPOSIUM: Mechanics of Electronic and Photonic Materials
-ORGANIZERS: John Rogers, Wei Lu, Yonggang Huang
-Flexible electronics, thin-film mechanics, and reliability of semiconductor devices.`,
-            "t5_s5.1": `SYMPOSIUM: Dynamic Failure and Fragmentation
-ORGANIZERS: K.T. Ramesh, Guruswami Ravichandran, Jose Achutegui
-High-rate deformation, wave propagation, and impact mechanics in solids.`,
-            "t5_s5.2": `SYMPOSIUM: Fatigue and Fracture of Structural Materials
-ORGANIZERS: James Newman, Robert McMeeking, Alberto Carpinteri
-Crack growth, life prediction, and fracture toughness in metals and alloys.`,
-            "t5_s5.3": `SYMPOSIUM: Mechanics of Instabilities in Solids and Structures
-ORGANIZERS: Katia Bertoldi, Pedro Reis, Francisco Lopez Jimenez
-Buckling, wrinkling, and pattern formation in soft and hard systems.`,
-            "t5_s5.4": `SYMPOSIUM: Damage Mechanics and Localization
-ORGANIZERS: Gilles Pijaudier-Cabot, Milan Jirasek, Bob Peerlings
-Continuum damage modeling, regularized formulations, and size effects.`,
-            "t5_s5.5": `SYMPOSIUM: Probabilistic Mechanics and Structural Reliability
-ORGANIZERS: Mircea Grigoriu, Michael Beer, Pol Spanos
-Stochastic modeling of material properties and structural health monitoring.`,
-            "t5_s5.6": `SYMPOSIUM: Computational Fracture Mechanics
-ORGANIZERS: Blaise Bourdin, Laura De Lorenzis, John Dolbow
-Phase-field modeling, XFEM, and peridynamics for crack propagation.`,
-            "t5_s5.7": `SYMPOSIUM: Mechanics of Interfaces and Adhesion
-ORGANIZERS: Kenneth Liechti, Kevin Turner, Nanshu Lu
-Interfacial fracture, contact mechanics, and adhesion in thin films and biological systems.`,
-            "t6_s6.1": `SYMPOSIUM: Non-Newtonian and Complex Fluids
-ORGANIZERS: Gareth McKinley, Eric Shaqfeh, Arezoo Ardekani
-Rheology, viscoelastic flows, and the mechanics of polymeric and surfactant solutions.`,
-            "t6_s6.2": `SYMPOSIUM: Mechanics of Granular Materials
-ORGANIZERS: Ken Kamrin, Karen Daniels, Jose Andrade
-Flow, jamming, and constitutive modeling of sands, powders, and grains.`,
-            "t6_s6.3": `SYMPOSIUM: Transport in Porous Media
-ORGANIZERS: Ruben Juanes, Majid Hassanizadeh, Howard Stone
-Fluid flow, solute transport, and multiphase interactions in geological and biological media.`,
-            "t6_s6.4": `SYMPOSIUM: Microfluidics and Bio-fluid Mechanics
-ORGANIZERS: Todd Squires, Ali Nadim, Kathleen Stebe
-Small-scale flows, lab-on-a-chip, and the mechanics of swimming microorganisms.`,
-            "t6_s6.5": `SYMPOSIUM: Hydrodynamic Instabilities and Turbulence
-ORGANIZERS: Steven Orszag, Parviz Moin, Alexander Smits
-Transition to turbulence, shear flows, and high-Reynolds number phenomena.`,
-            "t7_s7.1": `SYMPOSIUM: Topology Optimization and Generative Design
-ORGANIZERS: Ole Sigmund, Kurt Maute, James Guest
-New algorithms and applications for structural optimization.`,
-            "t7_s7.2": `SYMPOSIUM: Mechanics of Origami and Kirigami Structures
-ORGANIZERS: Glaucio Paulino, Itai Cohen, Christian Santangelo
-Folding-based design, deployable structures, and mechanical metamaterials.`,
-            "t7_s7.3": `SYMPOSIUM: Mechanics of Robotic and Autonomous Systems
-ORGANIZERS: Hod Lipson, Daniela Rus, Robert Wood
-Mechanical design for locomotion, manipulation, and sensing in autonomous robots.`,
-            "t7_s7.4": `SYMPOSIUM: Space Mechanics and Orbital Dynamics
-ORGANIZERS: Kathleen Howell, David Hyland, Richard Battin
-Mechanics of satellite constellations, interplanetary travel, and celestial bodies.`,
-            "t7_s7.5": `SYMPOSIUM: Mechanics in Extreme Environments (Space, Deep Sea)
-ORGANIZERS: Ares Rosakis, Guruswami Ravichandran, Michael Ortiz
-Material behavior under extreme temperatures, pressures, and radiation.`,
-            "t7_s7.6": `SYMPOSIUM: Quantum Mechanics and Atomic-scale Engineering
-ORGANIZERS: Richard Feynman, Stephen Hawking, Roger Penrose
-Exploring the intersection of continuum mechanics and quantum physics.`,
-            "t7_s7.7": `SYMPOSIUM: Mechanics of Sustainable Energy Systems (Wind, Solar, Nuclear)
-ORGANIZERS: Henrik Stiesdal, Semyon Vynnytskiy, Michael Twa
-Structural integrity and mechanics of renewable energy infrastructure.`,
-            "t7_s7.8": `SYMPOSIUM: Mechanics of Living Systems (Plant Mechanics, etc.)
-ORGANIZERS: Jacques Dumais, Anja Geitmann, Wendy Silk
-Exploring the growth, movement, and mechanical signals in plants and fungi.`,
-            "t7_s7.9": `SYMPOSIUM: Digital Twins and Virtual Engineering
-ORGANIZERS: Karen Willcox, Michael Grieves, Benjamin Schleich
-Real-time simulation and structural health monitoring using digital twins.`,
-            "t7_s7.10": `SYMPOSIUM: AI and Robotics in Mechanics Discovery
-ORGANIZERS: Markus Buehler, Steve Brunton, Nathan Kutz
-Using artificial intelligence to discover new laws of mechanics and material behaviors.`,
-            "t7_s7.11": `SYMPOSIUM: Mechanics of Cultural Heritage and Archeology
-ORGANIZERS: Alberto Carpinteri, George Wheeler, Luigia Binda
-Non-destructive testing and mechanical preservation of ancient structures and artifacts.`,
-            "t7_s7.12": `SYMPOSIUM: Geo-mechanics and Earth Systems Mechanics
-ORGANIZERS: Jean-Pierre Bardet, Ronaldo Borja, Lyesse Laloui
-Mechanics of earthquakes, landslides, and tectonic plate movements.`,
-            "t7_s7.13": `SYMPOSIUM: Education and Outreach in Theoretical and Applied Mechanics
-ORGANIZERS: Ares Rosakis, Keith Hjelmstad, Thomas Siegmund
-New methods for teaching mechanics and engaging the next generation of engineers.`,
+ORGANIZERS: Ashraf Bastawros, Kasra Momeni <kmomeni@ua.edu>, Liming Xiong <lxiong3@ncsu.edu>
+This symposium honors Prof. Valery Levitas’ seminal contributions to the mechanics and physics of structural changes in materials, spanning phase transformations, inelasticity, and coupled multi-physics phenomena across length and time scales.`,
+            "t1_s1.8": `SYMPOSIUM: Industrial Research and Perspectives
+ORGANIZERS: Nilesh Mankame
+Industrial Research and Perspectives`,
+
+            // TRACK 2
+            "t2_s2.1": `SYMPOSIUM: Emergent Behavior in Active Matter
+ORGANIZERS: Brian Cox, franck vernery, christian peco, Md Tahir Saif
+We seek papers that explore how relatively simple mechanisms and rules governing discrete active agents can give rise to complex and sometimes surprising emergent behavior in large populations.`,
+            "t2_s2.2": `SYMPOSIUM: Biomechanics and Biomimetics Across Time and Length Scales
+ORGANIZERS: Ottman Tertuliano, Claire Acevedo, Hortense Le Ferrand, Callan Luetkemeyer
+Tissues are inherently hierarchical, complex living structures. Their constituents assemble purposefully starting from the nanoscale to design macroscopically functional organs.`,
+            "t2_s2.3": `SYMPOSIUM: Structure and Mechanics of Living and Bioinspired Materials
+ORGANIZERS: Jingjie Yeo, Si Chen, Tian Li, Zhao Qin, Teng Zhang
+This symposium explores the current status and future research directions in living and bioinspired materials. Living materials represent an emerging class of natural or engineered composites.`,
+            "t2_s2.4": `SYMPOSIUM: Mechanically engineered biological fate, form, and function (F3)
+ORGANIZERS: Yue Liu, Xin Tang, Dennis Discher
+Mechanical driving forces fundamentally contribute to biological systems via a myriad of mechano-chemical-genetic pathways and ultimately regulate their fate, form, and function (F3).`,
+            "t2_s2.5": `SYMPOSIUM: Cell Mechanics and Mechanobiology
+ORGANIZERS: Shiva Rudraraju, Christian Franck, Jacob Notbohm, Johannes Weickenmeier, Harshavardhan Kalathur
+The mechanical response of biological cells and cell-scale structures is central to understanding their development, functioning, and interactions.`,
+            "t2_s2.6": `SYMPOSIUM: Experimental and Computational Methods in Mechanobiology and Biomaterial Innovation
+ORGANIZERS: Hanxun Jin, Farid Alisafaei, Grace Gu, Guy M. Genin
+A new paradigm is emerging in mechanobiology and biomaterials: designing materials from the molecular scale upward by understanding how hierarchical structures link atomistic-scale chemistry.`,
+            "t2_s2.7": `SYMPOSIUM: Biomechanics of Morphogenesis
+ORGANIZERS: Daniel Szymanski, Thomas Siegmund
+Forces within, between, and among cells drive morphogenesis. Force sensing allows cells, tissues, and organs to continuously adjust their physical properties.`,
+            "t2_s2.8": `SYMPOSIUM: From Nerves to Nanomaterials: Mechanics of Super Soft Porous Materials
+ORGANIZERS: Arina Korneva
+This mini symposium will bring together scientists who are pioneering theoretical, experimental, computational, and imaging methods to discover the mechanics of super soft fluid-saturated porous materials.`,
+
+            // TRACK 3
+            "t3_s3.1": `SYMPOSIUM: Composites R&D and Education Using Generative AI and LLM
+ORGANIZERS: Wenbin Yu, Dianyun Zhang
+Composites R&D is entering a transformative era as generative AI and large language models (LLMs) begin to reshape how we design, analyze, manufacture, and teach.`,
+            "t3_s3.2": `SYMPOSIUM: MECHANICS OF FIBROUS MATERIALS: FROM STRUCTURE TO FUNCTION
+ORGANIZERS: Hamed Hatami-Marbini, MATTHEW GRASINGER, CATALIN PICU
+An interconnected network of fibers forms the solid skeleton of many biological and non-biological materials, from the extracellular matrix to synthetic materials.`,
+            "t3_s3.3": `SYMPOSIUM: Mechanics-driven design and manufacturing for metamaterials and soft actuators
+ORGANIZERS: Craig Michael Hamel, Connor Armstrong, Shuai Wu, Shaoting Lin, Liwei Wang
+Recent advances in additive manufacturing have opened the design space for architected materials and soft robotic systems.`,
+            "t3_s3.4": `SYMPOSIUM: Mechanics of Materials and Structures for In-Space Manufacturing and Deployable Structures
+ORGANIZERS: Sameh Tawfick, Ioannis Chasiotis, Xin Ning
+There is an increasing need for higher performance, multi-functional and load-bearing space structures that can be manufactured in orbit.`,
+            "t3_s3.5": `SYMPOSIUM: Direct Ink Writing: From Process Mechanics and Control to Microstructure and Architected Materials
+ORGANIZERS: Jochen Mueller, Jordan Raney, Brett Compton
+Material-extrusion additive manufacturing, particularly Direct Ink Writing (DIW), has emerged as a versatile platform for fabricating functional materials.`,
+            "t3_s3.6": `SYMPOSIUM: AI Powered Inverse Design for Next Generation Composites
+ORGANIZERS: Srikanth Pilla, Gang Li
+Composites are rapidly expanding into high-rate, high-performance applications, but development cycles remain long. This session explores AI-driven inverse design.`,
+            "t3_s3.7": `SYMPOSIUM: Soft Robotics: Matter, Structure, and Intelligence
+ORGANIZERS: Wanliang Shan, Dan Preston, Jie Yin, Kaitlyn Becker, Sheila Russo
+This symposium explores the intersection of mechanics and robotics, focusing on how soft materials and compliant structures can create robots with inherent intelligence.`,
+            "t3_s3.8": `SYMPOSIUM: Programmable Morphing Matter: Bridging Bioinspiration, Mechanics, and Autonomous Design
+ORGANIZERS: Lining Yao, Wei Chen, Teng Zhang, Renee Zhao, Grace Gu, Yayue Pan, Liwei Wang, A B M Tahidul Haque, Shelly Zhang
+This symposium focuses on the convergence of Morphing Matter and Programmable Material Systems (PMS).`,
+
+            // TRACK 4
+            "t4_s4.1": `SYMPOSIUM: Liquid crystal elastomers: integrating the mechanics of liquid crystals and polymer networks
+ORGANIZERS: Tayler Hebner, Vicky Nguyen, H. Jerry Qi, Timothy White
+The Liquid Crystal Elastomers Symposium focuses on the unique coupling between liquid crystalline order and polymer network elasticity.`,
+            "t4_s4.2": `SYMPOSIUM: Advances on the Mechanics of Architected Materials
+ORGANIZERS: Carlos M. Portela, Lucas Meza, David Restrepo, Tian Chen, Christelle Combescure
+Architected materials combine topology and mesoscale morphological features to achieve exotic multi-physical properties.`,
+            "t4_s4.3": `SYMPOSIUM: Leveraging entanglement to enhance the multi-physical properties of networked materials across scales
+ORGANIZERS: Asaf Dana, Robert J Wagner
+Physical entanglements and loops, whereby two or more slender members are wound around one another, offer a powerful way to enhance toughness.`,
+            "t4_s4.4": `SYMPOSIUM: Controlling Mechanical Waves with Metamaterials
+ORGANIZERS: Charles Dorn, Ramathasan Thevamaran, Serife Tol, Vinod Ramakrishnan, Junfei Li
+The focus is on the control of mechanical waves and vibrations using architected materials.`,
+            "t4_s4.5": `SYMPOSIUM: Photomechanical and Electromechanical Behaviors in Ceramics, Semiconductors and Metals
+ORGANIZERS: Qi An, Lin Li, Yu Zou, Xinghang Zhang
+Photomechanical and electromechanical phenomena couple optical or electrical stimuli to a material’s mechanical response.`,
+            "t4_s4.6": `SYMPOSIUM: Structural Materials in Nuclear Environments
+ORGANIZERS: Cheng Sun, Ke Xu, Khaled Nabil SharafEldin, Yifan Zhang, Shuozhi Xu
+The growing emphasis on nuclear energy efficiency highlights the demand for high-performance structural materials.`,
+            "t4_s4.7": `SYMPOSIUM: Data-driven experimental and theoretical studies for functional nanoscale materials
+ORGANIZERS: Ahmad Ahmad, Juanjuan Lu, Di Zhang
+In today’s modern world, functional nanomaterials such as semiconductors and thin films are critical.`,
+            "t4_s4.8": `SYMPOSIUM: High Entropy Alloys and Metallic Glasses: Taming Order in Disorder
+ORGANIZERS: Lin Li, Yang Yang, Yue Fan, Penghui Cao, Qi An
+High entropy alloys (HEAs) and metallic glasses (MGs) are representative disordered materials.`,
+            "t4_s4.9": `SYMPOSIUM: Mechanics and Dynamics of Soft Electrochemically Active Materials
+ORGANIZERS: Xiaokang Wang, Royal Ihuaenyi, Xixian Yang, Siddharth Doshi
+Soft electrochemically active materials—such as organic mixed ionic–electronic conductors (OMIECs)—are vital for bioelectronics.`,
+            "t4_s4.10": `SYMPOSIUM: Advances in Experimental and Modeling Studies of High Strain-Rate Mechanics
+ORGANIZERS: Sinan Müftü, Mostafa Hassani, Jae-Hwang Lee
+This symposium brings together the research community engaged in experimental and computational studies of high-rate mechanics.`,
+            "t4_s4.11": `SYMPOSIUM: Mechanics of Energetic Materials
+ORGANIZERS: Brandon Runnels, Monique McClain
+Energetic materials (EMs), such as propellants and explosives, exhibit a broad spectrum of mechanical behaviors.`,
+
+            // TRACK 5
+            "t5_s5.1": `SYMPOSIUM: Mechanics of interfaces: deformation, adhesion, fracture, and friction
+ORGANIZERS: Qihan Liu, Ruobing Bai
+This mini-symposium highlights the mechanics of interfaces, which involves the interaction of two dissimilar materials.`,
+            "t5_s5.2": `SYMPOSIUM: Instabilities and Nonlinear Mechanics Across Structural Scales
+ORGANIZERS: Lucia Stein-Montalvo, Fani Derveni
+Controllable instabilities and nonlinear deformations in slender and compliant structures offer powerful new functions.`,
+            "t5_s5.3": `SYMPOSIUM: Instabilities for Functionality in Slender Structures and Architected Systems
+ORGANIZERS: Mingchao Liu, Yunlan Zhang, Jie Yin, Damiano Pasini, Petro M. Reis
+Mechanical instabilities—such as buckling, snap-through, and wrinkling—can be leveraged for functionality.`,
+            "t5_s5.4": `SYMPOSIUM: Complex rheology in polymeric materials and structures
+ORGANIZERS: Jiawei Yang, Yue (Luna) Zheng, Abigail Plummer, Ahmed Ettaf Elbanna
+Polymeric materials exhibit complex and nonlinear mechanical responses.`,
+            "t5_s5.5": `SYMPOSIUM: Mechanics of Failure in Network Materials
+ORGANIZERS: Chase Hartquist, Junsoo Kim, Bolei Deng, Shaoting Lin
+Networked architectures underpin the mechanical failure response of a vast array of materials.`,
+            "t5_s5.6": `SYMPOSIUM: Computational Fracture Mechanics Across Materials and Length Scales
+ORGANIZERS: Trisha Sain, Aditya Kumar, Lampros Svolos
+Over the last few decades, numerous computational methods have been developed for modeling fracture.`,
+            "t5_s5.7": `SYMPOSIUM: Mechanics of damage, fracture and friction in materials across scales
+ORGANIZERS: Ahmed Elbanna, David Kammer, John Kolinski, Krishnaswamy Ravi-Chandar
+Catastrophic failure of materials is a highly complex and nonlinear process.`,
+
+            // TRACK 6
+            "t6_s6.1": `SYMPOSIUM: Mechanics of Granular Media: Experiments, Theory, and Modeling
+ORGANIZERS: Ken Kamrin, David Henann, Ryan Hurley, Marcial Gonzalez, Carl Wassgren, Paul Mort, Adyota Gupta
+Granular materials display a variety of unique phenomena like jamming and segregation.`,
+            "t6_s6.2": `SYMPOSIUM: Dynamics, instabilities, and singularities in free surface flows
+ORGANIZERS: Osman Basaran, Hansol Wee, Ajay Kumar, Naresh Dhanwani
+Free surface flows with hydrodynamic singularities are legion in science and engineering.`,
+            "t6_s6.3": `SYMPOSIUM: Electrohydrodynamics
+ORGANIZERS: Osman Basaran, Petia Vlahovska, Ajay Kumar, Hansol Wee
+The birth of the field of electrohydrodynamics can be traced to the seminal papers by Lord Rayleigh.`,
+            "t6_s6.4": `SYMPOSIUM: Soft hydraulics: Low-Reynolds-number hydrodynamics and fluid-structure interactions
+ORGANIZERS: Ivan C. Christov, Shrihari D. Pande
+Soft hydraulics addresses the coupled dynamics of fluid flow and compliant conduit deformation.`,
+            "t6_s6.5": `SYMPOSIUM: Computational Modeling of Physiological Flows
+ORGANIZERS: Arezoo Ardekani, Sharun Kuhar, Dongjie (Fred) Jia
+Growing interest in computational investigations of physiological flows has provided new mechanical insights.`,
+
+            // TRACK 7
+            "t7_s7.1": `SYMPOSIUM: Scientific machine learning for computational mechanics
+ORGANIZERS: Romit Maulik, Ilias Bilionis, Marcial Gonzalez, Mina Karimi, Sascha Ranftl
+Scientific machine learning (SciML) is rapidly transforming computational mechanics.`,
+            "t7_s7.2": `SYMPOSIUM: Physics-Informed and Data-Driven Approaches to Coupled Multiphysics
+ORGANIZERS: Xingchi Yan, Siyuan Song
+Coupled physical systems require advanced data-driven approaches.`,
+            "t7_s7.3": `SYMPOSIUM: Symmetry in mechanics
+ORGANIZERS: Ivan C. Christov, Md Mahmudur Rahman
+Symmetry is a cornerstone of theoretical physics and continuum mechanics.`,
+            "t7_s7.4": `SYMPOSIUM: Advances in Experimental Electro-Chemo-Mechanics
+ORGANIZERS: Juner Zhu, Kejie Zhao, Yijin Liu, Xuekun Lu
+Electro-chemo-mechanics is a rapidly advancing frontier at the intersection of electrochemistry and mechanics.`,
+            "t7_s7.5": `SYMPOSIUM: Physics-Based and Uncertainty-Aware Modeling of Materials from Multisource Data
+ORGANIZERS: Bahador Bahmani, Horacio D. Espinosa, Nikolaos Bouklas, Miguel Bessa
+Advances in experimental characterization and high-fidelity simulations.`,
+            "t7_s7.6": `SYMPOSIUM: Mechanics in Sustainable Materials and Systems
+ORGANIZERS: Christos Athanasiou, Xing Liu, Miguel Bessa, Lihua Jin, Vikas Srivastava
+Mechanics serves as a cornerstone for developing cutting-edge green technologies.`,
+            "t7_s7.7": `SYMPOSIUM: Data-driven methods for inelastic solids and structures
+ORGANIZERS: Burigede Liu, Yupeng Zhang, Hossein (Amir) Salahshoor, Swarnava Ghosh
+The inelastic response of solids can be induced by fatigue or plastic deformation.`,
+            "t7_s7.8": `SYMPOSIUM: Advances in experimental mechanics: new methods, instrumentation, and data driven discovery
+ORGANIZERS: Vatsa Gandhi, Suraj Ravindran, Angkur Shaikeea
+Advances in experimental mechanics have redefined how complex problems are studied.`,
+            "t7_s7.9": `SYMPOSIUM: High-Throughput and Rapid Testing
+ORGANIZERS: Kawai Kwok, Wen Luo
+This mini-symposium provides a forum to discuss concepts for high-throughput mechanical testing.`,
+            "t7_s7.10": `SYMPOSIUM: Multimodal Scanning Probe Nano-Metrology via Contact and Non-Contact Mechanics
+ORGANIZERS: SungWoo Nam, Mehmet Baykara
+The rapid advancement of nanotechnology has amplified the need for high-resolution metrology.`,
+            "t7_s7.11": `SYMPOSIUM: AI for Advanced Materials and Structures
+ORGANIZERS: Marco Maurizi, Dennis Kochmann, Xiaoyu (Rayne) Zheng, Emma Lejeune
+Artificial Intelligence has achieved unprecedented advances in mechanics.`,
+            "t7_s7.12": `SYMPOSIUM: Coupled mechanics of soft solids
+ORGANIZERS: Eric M. Stewart, Keven Alkhoury, Vikas Srivastava, Mrityunjay Kothari, Shawn Chester
+The coupled response of solid materials to multiple fields such as heat and electricity.`,
+            "t7_s7.13": `SYMPOSIUM: Dynamics and Control of Novel Infrastructural Systems
+ORGANIZERS: Arun Prakash, James Gibert, Shirley J. Dyke
+The need for low-cost, energy-efficient infrastructural systems is growing.`
         };
 
         // Initialize Track List UI
