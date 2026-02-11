@@ -17,34 +17,64 @@
         /* --- BANNER --- */
         .main-banner { height: 100px; background-color: var(--cvent-grey); flex-shrink: 0; border-bottom: 3px solid var(--purdue-gold); display: flex; justify-content: space-between; align-items: center; padding: 0 45px; box-sizing: border-box; }
         .purdue-signature { height: 55px; width: auto; }
-        .banner-right { text-align: right; line-height: 1.25; }
         .banner-right h1 { font-family: "Arial Black", sans-serif; font-size: 1.7rem; margin: 0; font-weight: 900; color: var(--purdue-black); text-transform: uppercase; }
         .info-date { font-family: Georgia, serif; font-weight: bold; font-size: 0.95rem; text-transform: uppercase; margin-top: 3px; }
         .info-loc { font-family: Georgia, serif; font-size: 0.85rem; color: #555; }
-        .info-link { margin-top: 6px; }
-        .info-link a { font-family: Georgia, serif; font-size: 0.8rem; color: var(--purdue-black); text-decoration: none; font-weight: bold; border-bottom: 1px solid var(--purdue-gold); }
 
-        /* --- LAYOUT --- */
-        .app-container { display: flex; flex: 1; overflow: hidden; }
+        /* --- LAYOUT (DESKTOP DEFAULT) --- */
+        .app-container { display: flex; flex: 1; overflow: hidden; position: relative; }
         
-        #track-sidebar { width: 260px; background: var(--sidebar-black); color: white; overflow-y: auto; }
-        .pane-header { padding: 12px 20px; background: var(--purdue-gold); color: var(--purdue-black); font-weight: 900; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; }
+        /* Track Sidebar: Always visible on PC */
+        #track-sidebar { width: 260px; background: var(--sidebar-black); color: white; overflow-y: auto; flex-shrink: 0; display: block; }
+        
+        /* Session Sidebar: Hidden on PC until a track is selected */
+        #session-sidebar { width: 320px; border-right: 1px solid #ddd; background: var(--cvent-grey); overflow-y: auto; display: none; flex-shrink: 0; }
+        
+        /* Reading Pane: Main content area */
+        #reading-pane { flex: 1; overflow-y: auto; padding: 55px 75px; background: white; }
+
+        .pane-header { padding: 12px 20px; background: var(--purdue-gold); color: var(--purdue-black); font-weight: 900; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; display: flex; justify-content: space-between; align-items: center; }
         .track-item { padding: 15px 20px; border-bottom: 1px solid #2A2A2A; cursor: pointer; font-size: 13px; }
         .track-label { display: block; font-size: 10px; color: var(--purdue-gold); font-weight: 800; margin-bottom: 4px; text-transform: uppercase; }
         .track-item.active { background: white; color: var(--purdue-black); font-weight: 700; border-left: 6px solid var(--purdue-gold); }
 
-        #session-sidebar { width: 320px; border-right: 1px solid #ddd; background: var(--cvent-grey); overflow-y: auto; display: none; }
         .session-item { padding: 18px 20px; border-bottom: 1px solid #ddd; cursor: pointer; }
-        .session-item:hover { background: #e0e0e0; }
         .session-item.active { background: white; border-right: 5px solid var(--purdue-gold); }
-        
-        .session-title { font-size: 13.5px; color: var(--purdue-black); font-weight: 600; text-transform: none !important; }
+        .session-title { font-size: 13.5px; color: var(--purdue-black); font-weight: 600; }
 
-        #reading-pane { flex: 1; overflow-y: auto; padding: 55px 75px; background: white; }
-        .symp-header { color: var(--purdue-black); font-size: 2.2rem; font-family: Georgia, serif; border-bottom: 2px solid var(--purdue-gold); padding-bottom: 15px; text-transform: none !important; }
+        .symp-header { color: var(--purdue-black); font-size: 2.2rem; font-family: Georgia, serif; border-bottom: 2px solid var(--purdue-gold); padding-bottom: 15px; }
         .organizer-callout { margin: 25px 0; padding: 20px; background: #F9F9F9; border-left: 5px solid var(--purdue-gold); }
-        .organizer-name { font-weight: 600; margin-top: 5px; font-size: 15px; text-transform: none !important; }
         .description-body { font-size: 17.5px; line-height: 1.8; color: #333; white-space: pre-wrap; }
+
+        /* Mobile Nav Buttons - Hidden on PC */
+        .mobile-nav { display: none; background: var(--purdue-black); color: white; border: none; padding: 8px 12px; font-weight: bold; cursor: pointer; border-radius: 4px; text-transform: uppercase; font-size: 10px; }
+
+        /* --- MOBILE RESPONSIVENESS (PHONES) --- */
+        @media (max-width: 768px) {
+            #track-sidebar, #session-sidebar, #reading-pane { 
+                position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                display: none; background: white; 
+                /* Crucial: Ensure the individual panes can scroll */
+                overflow-y: auto !important; 
+                -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+            }
+            
+            /* The Track List is the default 'Layer 1' on mobile */
+            #track-sidebar { display: block; z-index: 10; 
+                background: var(--sidebar-black); /* Keep original background */
+            }
+            
+            /* 'mobile-active' triggers the slide-over effect */
+            .mobile-active { display: block !important; }
+            #session-sidebar.mobile-active { z-index: 20; }
+            #reading-pane.mobile-active { z-index: 30; }
+
+            .mobile-nav { display: block; }
+            #reading-pane { padding: 20px; }
+            .main-banner { height: auto; padding: 10px 20px; flex-direction: column; text-align: center; }
+            .banner-right h1 { font-size: 1.3rem; }
+            .purdue-signature { height: 35px; margin-bottom: 5px; }
+        }
     </style>
 </head>
 <body>
@@ -57,7 +87,6 @@
             <h1>SES 2026</h1>
             <div class="info-date">October 11-14, 2026</div>
             <div class="info-loc">Purdue University | West Lafayette, IN</div>
-            <div class="info-link"><a href="https://events.purdue.edu/ses2026" target="_blank">Official Conference Website →</a></div>
         </div>
     </header>
 
@@ -66,11 +95,17 @@
             <div class="pane-header">Scientific Tracks</div>
             <div id="track-list"></div>
         </div>
+
         <div id="session-sidebar">
-            <div class="pane-header" style="background:#e0e0e0; color:#555;">Symposia List</div>
+            <div class="pane-header" style="background:#e0e0e0; color:#555;">
+                Symposia
+                <button class="mobile-nav" onclick="closeMobilePane('session-sidebar')">← Tracks</button>
+            </div>
             <div id="session-list"></div>
         </div>
+
         <div id="reading-pane">
+            <button class="mobile-nav" style="margin-bottom: 20px;" onclick="closeMobilePane('reading-pane')">← Back to List</button>
             <div id="displayArea">
                 <h3 style="color: #ccc; text-align: center; margin-top: 100px; font-weight: 400;">Select a track to browse symposia</h3>
             </div>
@@ -784,24 +819,40 @@ o	Novel numerical / experimental techniques for the above`,
 
 };
 
-        // Initialize Track List UI
-        const trackContainer = document.getElementById('track-list');
-        Object.entries(TRACKS).forEach(([id, name]) => {
-            const div = document.createElement('div');
-            div.className = 'track-item';
-            div.innerHTML = `<span class="track-label">Track ${id}</span> ${name}`;
-            div.onclick = () => loadSessions(id, div);
-            trackContainer.appendChild(div);
+        // NAVIGATION LOGIC
+        function openMobilePane(id) {
+            if (window.innerWidth <= 768) {
+                document.getElementById(id).classList.add('mobile-active');
+            }
+        }
+
+        function closeMobilePane(id) {
+            if (window.innerWidth <= 768) {
+                document.getElementById(id).classList.remove('mobile-active');
+            }
+        }
+
+        // INITIALIZE APP
+        document.addEventListener("DOMContentLoaded", () => {
+            const trackContainer = document.getElementById('track-list');
+            trackContainer.innerHTML = ""; // Clear any placeholders
+            Object.entries(TRACKS).forEach(([id, name]) => {
+                const div = document.createElement('div');
+                div.className = 'track-item';
+                div.innerHTML = `<span class="track-label">Track ${id}</span> ${name}`;
+                div.onclick = () => loadSessions(id, div);
+                trackContainer.appendChild(div);
+            });
         });
 
-        // Load sessions into the middle column from the local DATA object
         function loadSessions(trackId, element) {
             document.querySelectorAll('.track-item').forEach(el => el.classList.remove('active'));
             element.classList.add('active');
     
             const sidebar = document.getElementById('session-sidebar');
             const list = document.getElementById('session-list');
-            sidebar.style.display = "block";
+            
+            sidebar.style.display = "block"; // Show sidebar on PC
             list.innerHTML = "";
 
             const searchPrefix = `t${trackId}_s`;
@@ -809,42 +860,34 @@ o	Novel numerical / experimental techniques for the above`,
             Object.keys(SYMPOSIUM_DATA).forEach(sessionId => {
                 if (sessionId.startsWith(searchPrefix)) {
                     const rawText = SYMPOSIUM_DATA[sessionId];
-                    const lines = rawText.split('\n');
-                    const title = lines[0].replace('SYMPOSIUM:', '').trim();
-            
-                    // NEW: Extract the index (e.g., "1.1") from "t1_s1.1"
                     const sessionIndex = sessionId.split('s')[1]; 
+                    const title = rawText.split('\n')[0].replace('SYMPOSIUM:', '').trim();
 
                     const item = document.createElement('div');
                     item.className = "session-item";
-            
-                    // NEW: Display the index in front of the title
                     item.innerHTML = `
                         <div class="session-title">
                             <span style="color: var(--purdue-gold); font-weight: 800; margin-right: 8px;">${sessionIndex}</span>
                             ${title}
                         </div>
-            `       ;
+                    `;
             
-                item.onclick = () => {
-                    document.querySelectorAll('.session-item').forEach(el => el.classList.remove('active'));
-                    item.classList.add('active');
-                    renderReadingPane(rawText);
-                };
-                list.appendChild(item);
-            }
-        });
-
-        if (list.innerHTML === "") {
-            list.innerHTML = "<div style='padding:20px; color:#888;'>No sessions found for this track.</div>";
+                    item.onclick = () => {
+                        document.querySelectorAll('.session-item').forEach(el => el.classList.remove('active'));
+                        item.classList.add('active');
+                        renderReadingPane(rawText);
+                    };
+                    list.appendChild(item);
+                }
+            });
+            
+            openMobilePane('session-sidebar'); // Drill down on Mobile
         }
-    }
 
-        // Render the reading pane with raw text from the file data
         function renderReadingPane(rawText) {
             const lines = rawText.split('\n');
             const title = lines[0].replace('SYMPOSIUM:', '').trim();
-            const organizers = lines[1].replace('ORGANIZERS:', '').trim();
+            const organizers = lines[1] ? lines[1].replace('ORGANIZERS:', '').trim() : "TBA";
             const description = lines.slice(2).join('\n');
 
             document.getElementById('displayArea').innerHTML = `
@@ -855,6 +898,9 @@ o	Novel numerical / experimental techniques for the above`,
                 </div>
                 <div class="description-body">${description}</div>
             `;
+            
+            document.getElementById('reading-pane').scrollTop = 0;
+            openMobilePane('reading-pane'); // Drill down on Mobile
         }
     </script>
 </body>
